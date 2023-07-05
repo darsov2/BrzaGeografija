@@ -17,15 +17,18 @@ namespace BrzaGeografija
 {
     public partial class QuizQuestion : Form
     {
-        HashSet<IQuestion> questions;
+        HashSet<Question> questions;
         int question;
         int openedQuestions;
         int correctQuestions;
+        int typeOfQuestion;
         public QuizQuestion(int typeOfQuestion)
         {
             InitializeComponent();
+            this.typeOfQuestion = typeOfQuestion;
             this.DoubleBuffered = true;
-            questions = new HashSet<IQuestion>(new QuestionComparer());
+
+            questions = new HashSet<Question>(new QuestionComparer());
             if (typeOfQuestion == 0)
             {
                 List<Country> countries = FirebaseComm.FetchCountries();
@@ -42,6 +45,15 @@ namespace BrzaGeografija
                     questions.Add(new FlagQuestion(countries));
                 }
             }
+            else if(typeOfQuestion == 2)
+            {
+                List<Landmark> landmarks = FirebaseComm.FetchLandmarks();
+                while (questions.Count != landmarks.Count)
+                {
+                    questions.Add(new LandmarkQuestion(landmarks));
+                }
+            }
+            LoadBackground();
             question = 0;
             openedQuestions = 0;
             correctQuestions = 0;
@@ -49,12 +61,38 @@ namespace BrzaGeografija
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void QuizQuestion_Load(object sender, EventArgs e)
         {
             loadQuestion(question);
+        }
+
+        private void LoadBackground()
+        {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            if (typeOfQuestion == 0)
+            {
+                string FileName = string.Format("{0}Resources\\" + "gradovi.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                string FileName2 = string.Format("{0}Resources\\" + "gradovi1.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                this.BackgroundImage = Image.FromFile(FileName);
+                pictureBox6.Image = Image.FromFile(FileName2);
+            }
+            else if(typeOfQuestion == 1)
+            {
+                string FileName = string.Format("{0}Resources\\" + "3.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                string FileName2 = string.Format("{0}Resources\\" + "zname1.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                this.BackgroundImage = Image.FromFile(FileName);
+                pictureBox6.Image = Image.FromFile(FileName2);
+            }    
+            else if(typeOfQuestion == 2)
+            {
+                string FileName = string.Format("{0}Resources\\" + "4.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                string FileName2 = string.Format("{0}Resources\\" + "znamenitosti.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                this.BackgroundImage = Image.FromFile(FileName);
+                pictureBox6.Image = Image.FromFile(FileName2);
+            }
         }
 
         private void answerQuestion(int ans)
@@ -69,13 +107,43 @@ namespace BrzaGeografija
             }
         }
 
+        private void adjustFontSize()
+        {
+            if(label1.Text.Length > 36)
+            {
+                label1.Font = new Font(label1.Font.FontFamily, 22, label1.Font.Style);
+            }
+            if (label2.Text.Length > 11)
+            {
+                label2.Font = new Font(label2.Font.FontFamily, 18, label2.Font.Style);
+            }
+            if (label3.Text.Length > 11)
+            {
+                label3.Font = new Font(label3.Font.FontFamily, 18, label3.Font.Style);
+            }
+            if (label4.Text.Length > 11)
+            {
+                label4.Font = new Font(label4.Font.FontFamily, 18, label4.Font.Style);
+            }
+            if (label5.Text.Length > 11)
+            {
+                label5.Font = new Font(label5.Font.FontFamily, 18, label5.Font.Style);
+            }
+        }
+
+        private void setDefaultFontSize()
+        {
+            label1.Font = new Font(label1.Font.FontFamily, 28, label1.Font.Style);
+            label2.Font = new Font(label2.Font.FontFamily, 28, label2.Font.Style);
+            label3.Font = new Font(label3.Font.FontFamily, 28, label3.Font.Style);
+            label4.Font = new Font(label4.Font.FontFamily, 28, label4.Font.Style);
+            label5.Font = new Font(label5.Font.FontFamily, 28, label5.Font.Style);
+        }
+
         private void loadQuestion(int questionNo)
         {
-            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
-            MessageBox.Show(Path.Combine(RunningPath, @"..\..\"));
-            string FileName = string.Format("{0}Resources\\Blue Illustration World Meteorological Day Instagram Post (3).png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-            this.BackgroundImage = Image.FromFile(FileName);
-
+            LoadBackground();
+            setDefaultFontSize();
             label1.Text = (questions.ElementAt(questionNo)).getQuestionText();
 
             List<string> answer = (questions.ElementAt(questionNo)).getAnswers();
@@ -84,7 +152,18 @@ namespace BrzaGeografija
             label4.Text = answer.ElementAt(2);
             label5.Text = answer.ElementAt(3);
 
-            pictureBox1.Load(questions.ElementAt(questionNo).getImageUrl());
+            adjustFontSize();
+
+            try
+            {
+                pictureBox1.Load(questions.ElementAt(questionNo).getImageUrl());
+            }
+            catch (Exception)
+            {
+                loadQuestion(++question);
+
+            }
+
 
             question++;
             openedQuestions++;
@@ -102,7 +181,7 @@ namespace BrzaGeografija
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            loadQuestion(question);
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -138,6 +217,22 @@ namespace BrzaGeografija
         private void label5_Click(object sender, EventArgs e)
         {
             pictureBox5_Click(sender, e);
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            loadQuestion(question);
+        }
+
+        private void QuizQuestion_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ResultBox resultBox = new ResultBox(correctQuestions, openedQuestions);
+            resultBox.Show();
         }
     }
 }

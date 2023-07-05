@@ -63,6 +63,16 @@ namespace BrzaGeografija.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arr_r {
+            get {
+                object obj = ResourceManager.GetObject("arr_r", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Blue_Illustration_World_Meteorological_Day_Instagram_Post {
             get {
                 object obj = ResourceManager.GetObject("Blue Illustration World Meteorological Day Instagram Post", resourceCulture);
@@ -116,6 +126,36 @@ namespace BrzaGeografija.Properties {
         internal static System.Drawing.Bitmap Blue_Illustration_World_Meteorological_Day_Instagram_Post__5_ {
             get {
                 object obj = ResourceManager.GetObject("Blue Illustration World Meteorological Day Instagram Post (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crveno {
+            get {
+                object obj = ResourceManager.GetObject("crveno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gradovi {
+            get {
+                object obj = ResourceManager.GetObject("gradovi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap msg {
+            get {
+                object obj = ResourceManager.GetObject("msg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +226,56 @@ namespace BrzaGeografija.Properties {
         internal static System.Drawing.Bitmap test3 {
             get {
                 object obj = ResourceManager.GetObject("test3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zeleno {
+            get {
+                object obj = ResourceManager.GetObject("zeleno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zname {
+            get {
+                object obj = ResourceManager.GetObject("zname", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zname1 {
+            get {
+                object obj = ResourceManager.GetObject("zname1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap znamenitosti {
+            get {
+                object obj = ResourceManager.GetObject("znamenitosti", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zolto {
+            get {
+                object obj = ResourceManager.GetObject("zolto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

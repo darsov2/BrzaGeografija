@@ -21,6 +21,7 @@ namespace BrzaGeografija
         private int port;
         private List<Game> games;
         private Game clientGame;
+        private Game actualGame;
         private TcpListener server;
         private TcpClient tcpClient;
         private NetworkStream stream;
@@ -30,7 +31,7 @@ namespace BrzaGeografija
         private bool serverDone;
         private bool clientDone;
         private List<char> usedLetters;
-        private readonly string alphabet = "АБВГДЃЕЖЗЅИЈКЛЉМНОПРСТЌУФХЦЧЏШ";
+        private readonly string alphabet = "АБВГДЕЖЗИЈКЛЉМНОПРСТЌУФХЦЧЏШ";
         public ServerView(TcpListener server, TcpClient client, NetworkStream stream, int _port)
         {
             this.server = server;
@@ -56,6 +57,30 @@ namespace BrzaGeografija
             }
         }
 
+        private void hidePoints()
+        {
+            label4.Hide();
+            label5.Hide();
+            label6.Hide();
+            label7.Hide();
+            label8.Hide();
+            label9.Hide();
+            label10.Hide();
+            label11.Hide();
+        }
+
+        private void showPoints()
+        {
+            label4.Show();
+            label5.Show();
+            label6.Show();
+            label7.Show();
+            label8.Show();
+            label9.Show();
+            label10.Show();
+            label11.Show();
+        }
+
         private void fillOpponent(Game game)
         {
             textBox18.Text = game.Name;
@@ -67,6 +92,22 @@ namespace BrzaGeografija
             textBox12.Text = game.Plant;
             textBox11.Text = game.Thing;
             textBox10.Text = Convert.ToString(game.Points);
+
+            actualGame.Letter = letter;
+            int[] points = actualGame.CheckGame(game);
+
+            showPoints();
+
+            label4.Text = Convert.ToString(points[0]);
+            label5.Text = Convert.ToString(points[1]);
+            label6.Text = Convert.ToString(points[2]);
+            label7.Text = Convert.ToString(points[3]);
+            label8.Text = Convert.ToString(points[4]);
+            label9.Text = Convert.ToString(points[5]);
+            label10.Text = Convert.ToString(points[6]);
+            label11.Text = Convert.ToString(points[7]);
+
+            textBox9.Text = Convert.ToString(points.Sum());
         }
 
         private async Task ProcessClient(TcpClient client)
@@ -158,6 +199,11 @@ namespace BrzaGeografija
             //StartServer();
             disableTextBoxes();
             AcceptClients();
+            startNewGame();
+        }
+
+        private void startNewGame()
+        {
             letter = randomLetter();
             usedLetters.Add(letter);
             SendDataToClients(0, "letter:" + Convert.ToString(letter));
@@ -166,6 +212,8 @@ namespace BrzaGeografija
             textBox1.Focus();
             timer1.Start();
             this.Height = 300;
+            hidePoints();
+            label3.Hide();
         }
 
         private char randomLetter()
@@ -225,9 +273,9 @@ namespace BrzaGeografija
                 if(!serverDone)
                 {
                     serverDone = true;
-                    Game game = new Game(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, 0);
-                    games.Add(game);
-                    SendDataToClients(1, "", game);
+                    actualGame = new Game(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, 0);
+                    games.Add(actualGame);
+                    SendDataToClients(1, "", actualGame);
                 }
                 if (clientDone)
                 {
@@ -247,11 +295,10 @@ namespace BrzaGeografija
             {
                 fillOpponent(clientGame);
                 this.Height = 500;
-                label3.Hide();
             }
-            Game game = new Game(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, 0);
-            games.Add(game);
-            SendDataToClients(1, "", game);
+            actualGame = new Game(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, 0);
+            games.Add(actualGame);
+            SendDataToClients(1, "", actualGame);
         }
     }
 }
