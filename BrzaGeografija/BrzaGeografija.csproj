@@ -86,7 +86,6 @@
     <Compile Include="Classes\LetterData.cs" />
     <Compile Include="Classes\Question.cs" />
     <Compile Include="Classes\QuestionComparer.cs" />
-    <Compile Include="Classes\RESTControl.cs" />
     <Compile Include="ClientView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,11 +124,23 @@
     <Compile Include="ResultBox.Designer.cs">
       <DependentUpon>ResultBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResultBoxBG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultBoxBG.Designer.cs">
+      <DependentUpon>ResultBoxBG.cs</DependentUpon>
+    </Compile>
     <Compile Include="ServerView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ServerView.Designer.cs">
       <DependentUpon>ServerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpeedRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpeedRun.Designer.cs">
+      <DependentUpon>SpeedRun.cs</DependentUpon>
     </Compile>
     <Compile Include="TrainingScreen.cs">
       <SubType>Form</SubType>
@@ -162,8 +173,14 @@
     <EmbeddedResource Include="ResultBox.resx">
       <DependentUpon>ResultBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ResultBoxBG.resx">
+      <DependentUpon>ResultBoxBG.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ServerView.resx">
       <DependentUpon>ServerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpeedRun.resx">
+      <DependentUpon>SpeedRun.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrainingScreen.resx">
       <DependentUpon>TrainingScreen.cs</DependentUpon>
@@ -207,6 +224,10 @@
     <None Include="Resources\gradovi.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\serverbcg.png" />
+    <None Include="Resources\mainbcg1.png" />
+    <None Include="Resources\mainbcg.png" />
+    <None Include="Resources\srGradovi.png" />
     <None Include="Resources\zeleno.png" />
     <None Include="Resources\zolto.png" />
     <None Include="Resources\msg.png" />

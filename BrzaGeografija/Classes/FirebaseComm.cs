@@ -64,6 +64,20 @@ namespace BrzaGeografija.Classes
             }
         }
 
+        public static List<string> FetchCities(char letter)
+        {
+            if (firebaseClient == null)
+            {
+                MessageBox.Show("Проблем со поврзување со базата на податоци");
+                return new List<string>();
+            }
+            else
+            {
+                FirebaseResponse response = firebaseClient.Get("letter_data/" + letter + "/cities");
+                return response.ResultAs<List<string>>();
+            }
+        }
+
         public static int getRandomNumber(int max)
         {
             return random.Next(max);

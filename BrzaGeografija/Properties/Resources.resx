@@ -124,6 +124,9 @@
   <data name="test3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\test3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="srGradovi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\srGradovi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pictureBox2.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pictureBox2.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,6 +151,9 @@
   <data name="pictureBox1.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pictureBox1.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mainbcg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainbcg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Blue Illustration World Meteorological Day Instagram Post (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gradovi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +162,12 @@
   </data>
   <data name="Blue Illustration World Meteorological Day Instagram Post (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blue Illustration World Meteorological Day Instagram Post (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zeleno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zeleno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mainbcg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainbcg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pictureBox3.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pictureBox3.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,7 +193,7 @@
   <data name="crveno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crveno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zeleno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zeleno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="serverbcg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\serverbcg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

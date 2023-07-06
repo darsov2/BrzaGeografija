@@ -20,8 +20,10 @@ namespace BrzaGeografija
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            QuizQuestion qq = new QuizQuestion(3);
-            qq.Show();
+            //QuizQuestion qq = new QuizQuestion(3);
+            //qq.Show();
+            SpeedRun sr = new SpeedRun();
+            sr.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

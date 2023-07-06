@@ -153,6 +153,26 @@ namespace BrzaGeografija.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mainbcg {
+            get {
+                object obj = ResourceManager.GetObject("mainbcg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mainbcg1 {
+            get {
+                object obj = ResourceManager.GetObject("mainbcg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap msg {
             get {
                 object obj = ResourceManager.GetObject("msg", resourceCulture);
@@ -196,6 +216,26 @@ namespace BrzaGeografija.Properties {
         internal static System.Drawing.Bitmap pozadina {
             get {
                 object obj = ResourceManager.GetObject("pozadina", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap serverbcg {
+            get {
+                object obj = ResourceManager.GetObject("serverbcg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap srGradovi {
+            get {
+                object obj = ResourceManager.GetObject("srGradovi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,19 +34,38 @@ namespace BrzaGeografija.Classes
             Points = points;
         }
 
+        [JsonConstructor]
+        public Game(char letter, string name, string city, string country, string river, string mountain, string plant, string animal, string thing, int points) : this(letter)
+        {
+            Name = name;
+            City = city;
+            Country = country;
+            River = river;
+            Mountain = mountain;
+            Plant = plant;
+            Animal = animal;
+            Thing = thing;
+            Points = points;
+        }
+
+        public Game(char letter)
+        {
+            Letter = letter;
+        }
+
         public int[] CheckGame(Game opponentGame)
         {
             LetterData letterData = FirebaseComm.FetchLetterData(Letter);
             int[] points = { 0, 0, 0, 0, 0, 0, 0, 0 };
-/*            if (letterData.Cities.Any(x => x.Equals(City, StringComparison.OrdinalIgnoreCase)))
+            if (letterData.Cities != null && letterData.Cities.Any(x => x.Equals(City, StringComparison.OrdinalIgnoreCase)))
             {
                 points[1] = 10;
                 if (letterData.Cities.Any(x => x.Equals(City, StringComparison.OrdinalIgnoreCase)) && opponentGame.City.Equals(City, StringComparison.OrdinalIgnoreCase))
                 {
                     points[1] -= 5;
                 }
-            }*/
-            if (letterData.Countries.Any(x => x.Equals(Country, StringComparison.OrdinalIgnoreCase)))
+            }
+            if (letterData.Countries != null && letterData.Countries.Any(x => x.Equals(Country, StringComparison.OrdinalIgnoreCase)))
             {
                 points[2] = 10;
                 if (letterData.Countries.Any(x => x.Equals(Country, StringComparison.OrdinalIgnoreCase)) && opponentGame.Country.Equals(Country, StringComparison.OrdinalIgnoreCase))
@@ -53,7 +73,7 @@ namespace BrzaGeografija.Classes
                     points[2] -= 5;
                 }
             }
-            if (letterData.Rivers.Any(x => x.Equals(River, StringComparison.OrdinalIgnoreCase)))
+            if (letterData.Rivers != null && letterData.Rivers.Any(x => x.Equals(River, StringComparison.OrdinalIgnoreCase)))
             {
                 points[3] = 10;
                 if (letterData.Rivers.Any(x => x.Equals(River, StringComparison.OrdinalIgnoreCase)) && opponentGame.River.Equals(River, StringComparison.OrdinalIgnoreCase))
@@ -61,7 +81,7 @@ namespace BrzaGeografija.Classes
                     points[3] -= 5;
                 }
             }
-            if (letterData.Mountains.Any(x => x.Equals(Mountain, StringComparison.OrdinalIgnoreCase)))
+            if (letterData.Mountains != null && letterData.Mountains.Any(x => x.Equals(Mountain, StringComparison.OrdinalIgnoreCase)))
             {
                 points[4] = 10;
                 if (letterData.Mountains.Any(x => x.Equals(Mountain, StringComparison.OrdinalIgnoreCase)) && opponentGame.Mountain.Equals(Mountain, StringComparison.OrdinalIgnoreCase))

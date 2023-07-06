@@ -38,7 +38,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
@@ -60,7 +59,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -155,23 +158,13 @@
             // 
             this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Enabled = false;
             this.textBox9.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox9.ForeColor = System.Drawing.Color.White;
             this.textBox9.Location = new System.Drawing.Point(558, 139);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(143, 28);
             this.textBox9.TabIndex = 11;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox10.ForeColor = System.Drawing.Color.White;
-            this.textBox10.Location = new System.Drawing.Point(558, 397);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(143, 28);
-            this.textBox10.TabIndex = 20;
             // 
             // textBox11
             // 
@@ -392,12 +385,47 @@
             this.label11.TabIndex = 32;
             this.label11.Text = "10";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Bebas Neue", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(730, 187);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(119, 48);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "label12";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(544, 379);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(348, 50);
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(851, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // ServerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BrzaGeografija.Properties.Resources.test3;
+            this.BackgroundImage = global::BrzaGeografija.Properties.Resources.serverbcg;
             this.ClientSize = new System.Drawing.Size(904, 501);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -410,7 +438,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.textBox13);
@@ -433,8 +460,10 @@
             this.MinimizeBox = false;
             this.Name = "ServerView";
             this.Text = "ServerView";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ServerView_FormClosing);
             this.Load += new System.EventHandler(this.ServerView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,7 +480,6 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox13;
@@ -473,5 +501,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
