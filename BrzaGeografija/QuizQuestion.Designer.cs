@@ -73,6 +73,7 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Garet Heavy", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(146, 370);
@@ -86,6 +87,7 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Garet Heavy", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(146, 451);
@@ -99,6 +101,7 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Garet Heavy", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(146, 531);
@@ -112,6 +115,7 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Garet Heavy", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(146, 611);
@@ -164,7 +168,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::BrzaGeografija.Properties.Resources.znamenitosti;
+            this.pictureBox6.Image = global::BrzaGeografija.Properties.Resources.drzavi;
             this.pictureBox6.Location = new System.Drawing.Point(75, 12);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(381, 73);
@@ -175,6 +179,7 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::BrzaGeografija.Properties.Resources.arr_r;
             this.pictureBox7.Location = new System.Drawing.Point(465, 200);
             this.pictureBox7.Name = "pictureBox7";
@@ -206,7 +211,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "QuizQuestion";
-            this.Text = "QuizQuestion";
+            this.Text = "Прашање";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuizQuestion_FormClosing);
             this.Load += new System.EventHandler(this.QuizQuestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

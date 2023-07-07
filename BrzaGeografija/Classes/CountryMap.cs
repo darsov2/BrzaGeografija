@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrzaGeografija.Classes
 {
-    internal class CountryMap
+    public class CountryMap
     {
         public string Country { get; set; }
         public string Png { get; set; }

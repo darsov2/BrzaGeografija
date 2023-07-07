@@ -71,6 +71,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox1.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(21, 75);
@@ -82,6 +83,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox2.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox2.ForeColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(200, 75);
@@ -93,6 +95,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox3.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox3.ForeColor = System.Drawing.Color.White;
             this.textBox3.Location = new System.Drawing.Point(379, 75);
@@ -104,6 +107,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox4.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox4.ForeColor = System.Drawing.Color.White;
             this.textBox4.Location = new System.Drawing.Point(558, 75);
@@ -115,6 +119,7 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox5.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox5.ForeColor = System.Drawing.Color.White;
             this.textBox5.Location = new System.Drawing.Point(738, 75);
@@ -126,6 +131,7 @@
             // 
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox6.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox6.ForeColor = System.Drawing.Color.White;
             this.textBox6.Location = new System.Drawing.Point(21, 139);
@@ -137,6 +143,7 @@
             // 
             this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox7.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox7.ForeColor = System.Drawing.Color.White;
             this.textBox7.Location = new System.Drawing.Point(200, 139);
@@ -148,6 +155,7 @@
             // 
             this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox8.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox8.ForeColor = System.Drawing.Color.White;
             this.textBox8.Location = new System.Drawing.Point(379, 139);
@@ -159,11 +167,12 @@
             // 
             this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Enabled = false;
+            this.textBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox9.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox9.ForeColor = System.Drawing.Color.White;
             this.textBox9.Location = new System.Drawing.Point(558, 139);
             this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(143, 28);
             this.textBox9.TabIndex = 11;
             // 
@@ -171,6 +180,7 @@
             // 
             this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox11.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox11.ForeColor = System.Drawing.Color.White;
             this.textBox11.Location = new System.Drawing.Point(379, 397);
@@ -182,6 +192,7 @@
             // 
             this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox12.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox12.ForeColor = System.Drawing.Color.White;
             this.textBox12.Location = new System.Drawing.Point(200, 397);
@@ -193,6 +204,7 @@
             // 
             this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox13.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox13.ForeColor = System.Drawing.Color.White;
             this.textBox13.Location = new System.Drawing.Point(21, 397);
@@ -204,6 +216,7 @@
             // 
             this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox14.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox14.ForeColor = System.Drawing.Color.White;
             this.textBox14.Location = new System.Drawing.Point(738, 333);
@@ -215,6 +228,7 @@
             // 
             this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox15.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox15.ForeColor = System.Drawing.Color.White;
             this.textBox15.Location = new System.Drawing.Point(558, 333);
@@ -226,6 +240,7 @@
             // 
             this.textBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox16.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox16.ForeColor = System.Drawing.Color.White;
             this.textBox16.Location = new System.Drawing.Point(379, 333);
@@ -237,6 +252,7 @@
             // 
             this.textBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox17.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox17.ForeColor = System.Drawing.Color.White;
             this.textBox17.Location = new System.Drawing.Point(200, 333);
@@ -248,6 +264,7 @@
             // 
             this.textBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(121)))), ((int)(((byte)(130)))));
             this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox18.Font = new System.Drawing.Font("Garet Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox18.ForeColor = System.Drawing.Color.White;
             this.textBox18.Location = new System.Drawing.Point(21, 333);
@@ -287,6 +304,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Location = new System.Drawing.Point(730, 117);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(162, 56);
@@ -401,6 +419,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Location = new System.Drawing.Point(544, 379);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(348, 50);
@@ -411,6 +430,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::BrzaGeografija.Properties.Resources.cross;
             this.pictureBox3.Location = new System.Drawing.Point(851, 4);
             this.pictureBox3.Name = "pictureBox3";
@@ -462,7 +482,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ServerView";
-            this.Text = "ServerView";
+            this.Text = "Брза географија - сервер";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ServerView_FormClosing);
             this.Load += new System.EventHandler(this.ServerView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

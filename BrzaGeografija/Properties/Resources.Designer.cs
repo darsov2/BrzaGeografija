@@ -173,6 +173,26 @@ namespace BrzaGeografija.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap drzavi {
+            get {
+                object obj = ResourceManager.GetObject("drzavi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap globus {
+            get {
+                object obj = ResourceManager.GetObject("globus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gradovi {
             get {
                 object obj = ResourceManager.GetObject("gradovi", resourceCulture);

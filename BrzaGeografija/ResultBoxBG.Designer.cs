@@ -110,8 +110,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ResultBoxBG";
-            this.Text = "ResultBoxBG";
+            this.Text = "Резултати од играта";
             this.Load += new System.EventHandler(this.ResultBoxBG_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

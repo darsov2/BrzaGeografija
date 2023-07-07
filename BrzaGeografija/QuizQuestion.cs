@@ -53,6 +53,14 @@ namespace BrzaGeografija
                     questions.Add(new LandmarkQuestion(landmarks));
                 }
             }
+            else if(typeOfQuestion == 3)
+            {
+                List <CountryMap> maps = FirebaseComm.FetchMaps();
+                while (questions.Count != maps.Count)
+                {
+                    questions.Add(new MapQuestion(maps));
+                }
+            }
             LoadBackground();
             question = 0;
             openedQuestions = 0;
@@ -72,27 +80,32 @@ namespace BrzaGeografija
         private void LoadBackground()
         {
             string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            string FileName = "";
+            string FileName2 = "";
             if (typeOfQuestion == 0)
             {
-                string FileName = string.Format("{0}Resources\\" + "gradovi.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-                string FileName2 = string.Format("{0}Resources\\" + "gradovi1.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-                this.BackgroundImage = Image.FromFile(FileName);
-                pictureBox6.Image = Image.FromFile(FileName2);
+                FileName = string.Format("{0}Resources\\" + "gradovi.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                FileName2 = string.Format("{0}Resources\\" + "gradovi1.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
             }
             else if(typeOfQuestion == 1)
             {
-                string FileName = string.Format("{0}Resources\\" + "3.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-                string FileName2 = string.Format("{0}Resources\\" + "zname1.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                FileName = string.Format("{0}Resources\\" + "3.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                FileName2 = string.Format("{0}Resources\\" + "zname1.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
                 this.BackgroundImage = Image.FromFile(FileName);
                 pictureBox6.Image = Image.FromFile(FileName2);
             }    
             else if(typeOfQuestion == 2)
             {
-                string FileName = string.Format("{0}Resources\\" + "4.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-                string FileName2 = string.Format("{0}Resources\\" + "znamenitosti.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-                this.BackgroundImage = Image.FromFile(FileName);
-                pictureBox6.Image = Image.FromFile(FileName2);
+                FileName = string.Format("{0}Resources\\" + "4.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                FileName2 = string.Format("{0}Resources\\" + "znamenitosti.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
             }
+            else if(typeOfQuestion == 3)
+            {
+                FileName = string.Format("{0}Resources\\" + "drzava.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                FileName2 = string.Format("{0}Resources\\" + "drzavi.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            }
+            this.BackgroundImage = Image.FromFile(FileName);
+            pictureBox6.Image = Image.FromFile(FileName2);
         }
 
         private void answerQuestion(int ans)

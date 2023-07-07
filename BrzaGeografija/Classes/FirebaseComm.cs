@@ -120,6 +120,20 @@ namespace BrzaGeografija.Classes
             }
         }
 
+        public static List<CountryMap> FetchMaps()
+        {
+            if (firebaseClient == null)
+            {
+                MessageBox.Show("Проблем со поврзување со базата на податоци");
+                return new List<CountryMap>();
+            }
+            else
+            {
+                FirebaseResponse response = firebaseClient.Get("maps");
+                return response.ResultAs<List<CountryMap>>();
+            }
+        }
+
         public static int getRandomNumber(int max)
         {
             return random.Next(max);

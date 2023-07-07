@@ -81,10 +81,10 @@
     <Compile Include="Classes\FirebaseComm.cs" />
     <Compile Include="Classes\FlagQuestion.cs" />
     <Compile Include="Classes\Game.cs" />
-    <Compile Include="Classes\IQuestion.cs" />
     <Compile Include="Classes\Landmark.cs" />
     <Compile Include="Classes\LandmarkQuestion.cs" />
     <Compile Include="Classes\LetterData.cs" />
+    <Compile Include="Classes\MapQuestion.cs" />
     <Compile Include="Classes\Question.cs" />
     <Compile Include="Classes\QuestionComparer.cs" />
     <Compile Include="ClientView.cs">
@@ -98,12 +98,6 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
@@ -285,6 +279,9 @@
     <None Include="Resources\gradovi1.png" />
     <None Include="Resources\crveno.png" />
     <None Include="Resources\cross.png" />
+    <Content Include="Resources\drzava.png" />
+    <None Include="Resources\drzavi.png" />
+    <None Include="Resources\globus.png" />
     <Content Include="Resources\incorrect01.png" />
     <Content Include="Resources\incorrect02.png" />
     <Content Include="Resources\incorrect03.png" />

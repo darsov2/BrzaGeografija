@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace BrzaGeografija.Classes
 {
-    class QuestionComparer : IEqualityComparer<IQuestion>
+    class QuestionComparer : IEqualityComparer<Question>
     {
-        public bool Equals(IQuestion x, IQuestion y)
+        public bool Equals(Question x, Question y)
         {
-            return x.getQuestionId() == y.getQuestionId();
+            return x.questionId == y.questionId;
         }
 
-        public int GetHashCode(IQuestion obj)
+        public int GetHashCode(Question obj)
         {
-            return obj.getQuestionId();
+            return obj.questionId;
         }
     }
 }

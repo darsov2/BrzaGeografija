@@ -6,17 +6,25 @@ using System.Threading.Tasks;
 
 namespace BrzaGeografija.Classes
 {
-    public abstract class Question : IQuestion
+    public abstract class Question
     {
         public int questionId { get; set; }
         public List<int> answers { get; set; }
         public int correctAnswer { get; set; }
         public string imageUrl { get; set; }
-        public abstract string answerQuestion(int ans);
+        public string answerQuestion(int ans)
+        {
+            if (ans == correctAnswer)
+            {
+                return "correct" + correctAnswer + ".png";
+            }
+            else
+            {
+                return "incorrect" + correctAnswer + ans + ".png";
+            }
+        }
         public abstract List<string> getAnswers();
-        public abstract int getCorrectAnswer();
-        public abstract string getImageUrl();
-        public abstract int getQuestionId();
         public abstract string getQuestionText();
+        public abstract string getImageUrl();
     }
 }

@@ -64,6 +64,9 @@
             this.ClientSize = new System.Drawing.Size(354, 351);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ResultBox";
             this.Text = "ResultBox";
             this.Load += new System.EventHandler(this.ResultBox_Load);

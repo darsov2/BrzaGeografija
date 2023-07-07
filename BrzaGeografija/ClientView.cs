@@ -29,6 +29,7 @@ namespace BrzaGeografija
         private bool stopGame;
         private bool serverDone;
         private bool clientDone;
+        private bool opponentFilled;
         private NetworkStream stream;
         private CancellationTokenSource cancellationTokenSource;
         int timeLeft;
@@ -42,6 +43,7 @@ namespace BrzaGeografija
             stopGame = false;
             serverTotalPoints = 0;
             label12.Text = Convert.ToString(games.Sum(x => x.Points));
+            opponentFilled = false;
         }
 
         private async void ConnectToServer()
@@ -100,6 +102,7 @@ namespace BrzaGeografija
                             label3.Hide();
                             clearTextBoxes();
                             this.Height = 300;
+                            opponentFilled = false;
                             hidePoints();
                         }
                         else if (receivedObject.Equals("serverDone"))
@@ -213,35 +216,39 @@ namespace BrzaGeografija
 
         private void fillOpponent(Game game)
         {
-            textBox18.Text = game.Name;
-            textBox17.Text = game.City;
-            textBox16.Text = game.Country;
-            textBox15.Text = game.River;
-            textBox14.Text = game.Mountain;
-            textBox13.Text = game.Animal;
-            textBox12.Text = game.Plant;
-            textBox11.Text = game.Thing;
+            if(!opponentFilled)
+            {
+                opponentFilled = true;
+                textBox18.Text = game.Name;
+                textBox17.Text = game.City;
+                textBox16.Text = game.Country;
+                textBox15.Text = game.River;
+                textBox14.Text = game.Mountain;
+                textBox13.Text = game.Animal;
+                textBox12.Text = game.Plant;
+                textBox11.Text = game.Thing;
 
-            int[] points = actualGame.CheckGame(game);
+                int[] points = actualGame.CheckGame(game);
 
-            showPoints();
+                showPoints();
 
-            label4.Text = Convert.ToString(points[0]);
-            label5.Text = Convert.ToString(points[1]);
-            label6.Text = Convert.ToString(points[2]);
-            label7.Text = Convert.ToString(points[3]);
-            label8.Text = Convert.ToString(points[4]);
-            label9.Text = Convert.ToString(points[5]);
-            label10.Text = Convert.ToString(points[6]);
-            label11.Text = Convert.ToString(points[7]);
+                label4.Text = Convert.ToString(points[0]);
+                label5.Text = Convert.ToString(points[1]);
+                label6.Text = Convert.ToString(points[2]);
+                label7.Text = Convert.ToString(points[3]);
+                label8.Text = Convert.ToString(points[4]);
+                label9.Text = Convert.ToString(points[5]);
+                label10.Text = Convert.ToString(points[6]);
+                label11.Text = Convert.ToString(points[7]);
 
-            actualGame.Points = points.Sum();
-            games.Add(actualGame);
-            label12.Text = Convert.ToString(games.Sum(x => x.Points));
-            textBox9.Text = Convert.ToString(points.Sum());
-            Thread.Sleep(1000);
+                actualGame.Points = points.Sum();
+                games.Add(actualGame);
+                label12.Text = Convert.ToString(games.Sum(x => x.Points));
+                textBox9.Text = Convert.ToString(points.Sum());
+                Thread.Sleep(1000);
 
-            SendDataToServer(0, "resultsShown");
+                SendDataToServer(0, "resultsShown");
+            }
         }
 
         private void ClientView_Load(object sender, EventArgs e)
@@ -269,7 +276,6 @@ namespace BrzaGeografija
                     Game game = new Game(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, 0);
                     game.Letter = actualGame.Letter;
                     actualGame = game;
-                    //games.Add(actualGame);
                     SendDataToServer(1, "", actualGame);
                 }
                 clientDone = true;
@@ -290,7 +296,6 @@ namespace BrzaGeografija
             Game game = new Game(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, 0);
             game.Letter = actualGame.Letter;
             actualGame = game;
-            //games.Add(actualGame);
             SendDataToServer(1, "", actualGame);
             if (serverDone)
             {
@@ -302,8 +307,7 @@ namespace BrzaGeografija
 
         private void ClientView_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-            //DisconnectFromServer();
+            DisconnectFromServer();
         }
 
         private void endGame()

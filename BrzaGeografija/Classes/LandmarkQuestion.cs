@@ -41,11 +41,6 @@ namespace BrzaGeografija.Classes
             return ans;
         }
 
-        public override int getCorrectAnswer()
-        {
-            return correctAnswer;
-        }
-
         public override string getQuestionText()
         {
             return "Koja е знаменитоста на сликата?";
@@ -54,23 +49,6 @@ namespace BrzaGeografija.Classes
         public override string getImageUrl()
         {
             return landmarks.ElementAt(questionId).Image;
-        }
-
-        public override int getQuestionId()
-        {
-            return questionId;
-        }
-
-        public override string answerQuestion(int ans)
-        {
-            if (ans == correctAnswer)
-            {
-                return "correct" + correctAnswer + ".png";
-            }
-            else
-            {
-                return "incorrect" + correctAnswer + ans + ".png";
-            }
         }
     }
 }

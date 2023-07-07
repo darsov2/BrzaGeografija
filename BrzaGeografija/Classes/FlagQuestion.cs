@@ -41,11 +41,6 @@ namespace BrzaGeografija.Classes
             return ans;
         }
 
-        public override int getCorrectAnswer()
-        {
-            return correctAnswer;
-        }
-
         public override string getQuestionText()
         {
             return "Чие е знамето на сликата?";
@@ -56,21 +51,16 @@ namespace BrzaGeografija.Classes
             return countries.ElementAt(questionId).Png;
         }
 
-        public override int getQuestionId()
-        {
-            return questionId;
-        }
-
-        public override string answerQuestion(int ans)
-        {
-            if (ans == correctAnswer)
-            {
-                return "correct" + correctAnswer + ".png";
-            }
-            else
-            {
-                return "incorrect" + correctAnswer + ans + ".png";
-            }
-        }
+        //public override string answerQuestion(int ans)
+        //{
+        //    if (ans == correctAnswer)
+        //    {
+        //        return "correct" + correctAnswer + ".png";
+        //    }
+        //    else
+        //    {
+        //        return "incorrect" + correctAnswer + ans + ".png";
+        //    }
+        //}
     }
 }

@@ -51,6 +51,9 @@
             this.BackgroundImage = global::BrzaGeografija.Properties.Resources.vremen;
             this.ClientSize = new System.Drawing.Size(389, 436);
             this.Controls.Add(this.listBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Time";
             this.Text = "Time";
             this.Load += new System.EventHandler(this.Time_Load);
