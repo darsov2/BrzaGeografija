@@ -111,6 +111,12 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameSelection.Designer.cs">
+      <DependentUpon>GameSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuizQuestion.cs">
@@ -143,6 +149,18 @@
     <Compile Include="SpeedRun.Designer.cs">
       <DependentUpon>SpeedRun.cs</DependentUpon>
     </Compile>
+    <Compile Include="SpeedRunCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpeedRunCategories.Designer.cs">
+      <DependentUpon>SpeedRunCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Time.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Time.Designer.cs">
+      <DependentUpon>Time.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrainingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameSelection.resx">
+      <DependentUpon>GameSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -182,6 +203,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SpeedRun.resx">
       <DependentUpon>SpeedRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpeedRunCategories.resx">
+      <DependentUpon>SpeedRunCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Time.resx">
+      <DependentUpon>Time.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrainingScreen.resx">
       <DependentUpon>TrainingScreen.cs</DependentUpon>
@@ -225,6 +252,9 @@
     <None Include="Resources\gradovi.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\vremen.png" />
+    <None Include="Resources\vreme1.png" />
+    <None Include="Resources\vreme.png" />
     <None Include="Resources\serverbcg.png" />
     <None Include="Resources\mainbcg1.png" />
     <None Include="Resources\mainbcg.png" />
@@ -240,6 +270,11 @@
     <None Include="Resources\test.png" />
     <None Include="Resources\Blue Illustration World Meteorological Day Instagram Post %285%29.png" />
     <None Include="Resources\Blue Illustration World Meteorological Day Instagram Post %284%29.png" />
+    <None Include="Resources\29.png" />
+    <None Include="Resources\25.png" />
+    <Content Include="Resources\26.png" />
+    <Content Include="Resources\27.png" />
+    <Content Include="Resources\28.png" />
     <Content Include="Resources\3.png" />
     <Content Include="Resources\4.png" />
     <None Include="Resources\arr_r.png" />
@@ -249,6 +284,7 @@
     <Content Include="Resources\correct3.png" />
     <None Include="Resources\gradovi1.png" />
     <None Include="Resources\crveno.png" />
+    <None Include="Resources\cross.png" />
     <Content Include="Resources\incorrect01.png" />
     <Content Include="Resources\incorrect02.png" />
     <Content Include="Resources\incorrect03.png" />

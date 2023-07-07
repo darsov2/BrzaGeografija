@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,19 +21,41 @@ namespace BrzaGeografija
         private int dataSize;
         private int correctAnswers;
 
-        public SpeedRun()
+        public SpeedRun(int questionType)
         {
             InitializeComponent();
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            string FileName = "";
+            char letter = randomLetter();
+            label3.Text = letter.ToString();
+            if (questionType == 0)
+            {
+                data = FirebaseComm.FetchCities(letter);
+                FileName = string.Format("{0}Resources\\" + "srGradovi.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            }
+            else if(questionType == 1)
+            {
+                data = FirebaseComm.FetchCountries(letter);
+                FileName = string.Format("{0}Resources\\" + "27.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            }
+            else if(questionType == 2)
+            {
+                data = FirebaseComm.FetchMountains(letter);
+                FileName = string.Format("{0}Resources\\" + "26.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            }
+            else if(questionType == 3)
+            {
+                data = FirebaseComm.FetchRivers(letter);
+                FileName = string.Format("{0}Resources\\" + "28.png", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            }
+            this.BackgroundImage = Image.FromFile(FileName);
             time = 0;
         }
 
         private void SpeedRun_Load(object sender, EventArgs e)
         {
-            char letter = randomLetter();
-            label3.Text = letter.ToString();
             time = 0;
             correctAnswers = 0;
-            data = FirebaseComm.FetchCities(letter);
             dataSize = data.Count;
             time = dataSize * 3;
             timerLabelFormat();
@@ -55,8 +78,9 @@ namespace BrzaGeografija
             time--;
             if(time <= 0)
             {
-                MessageBox.Show("Времето истече");
                 timer1.Stop();
+                Time time = new Time(data);
+                time.Show();
             }
             timerLabelFormat();
         }

@@ -78,6 +78,48 @@ namespace BrzaGeografija.Classes
             }
         }
 
+        public static List<string> FetchCountries(char letter)
+        {
+            if (firebaseClient == null)
+            {
+                MessageBox.Show("Проблем со поврзување со базата на податоци");
+                return new List<string>();
+            }
+            else
+            {
+                FirebaseResponse response = firebaseClient.Get("letter_data/" + letter + "/countries");
+                return response.ResultAs<List<string>>();
+            }
+        }
+
+        public static List<string> FetchRivers(char letter)
+        {
+            if (firebaseClient == null)
+            {
+                MessageBox.Show("Проблем со поврзување со базата на податоци");
+                return new List<string>();
+            }
+            else
+            {
+                FirebaseResponse response = firebaseClient.Get("letter_data/" + letter + "/rivers");
+                return response.ResultAs<List<string>>();
+            }
+        }
+
+        public static List<string> FetchMountains(char letter)
+        {
+            if (firebaseClient == null)
+            {
+                MessageBox.Show("Проблем со поврзување со базата на податоци");
+                return new List<string>();
+            }
+            else
+            {
+                FirebaseResponse response = firebaseClient.Get("letter_data/" + letter + "/mountains");
+                return response.ResultAs<List<string>>();
+            }
+        }
+
         public static int getRandomNumber(int max)
         {
             return random.Next(max);
