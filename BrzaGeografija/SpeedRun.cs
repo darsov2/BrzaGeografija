@@ -14,7 +14,7 @@ namespace BrzaGeografija
 {
     public partial class SpeedRun : Form
     {
-        private readonly string alphabet = "АБВГДЕЖЗИЈКЛЉМНОПРСТЌУФХЦЧЏШ";
+        private readonly string alphabet = "АБВГДЕЗИЈКЛМНОПРСТУФХЦЧЏШ";
         private readonly Random random = new Random();
         private int time;
         private List<string> data;

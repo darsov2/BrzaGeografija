@@ -352,7 +352,6 @@ namespace BrzaGeografija
             }
             actualGame = new Game(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, 0);
             actualGame.Letter = letter;
-            //games.Add(actualGame);
             SendDataToClients(1, "", actualGame);
         }
 

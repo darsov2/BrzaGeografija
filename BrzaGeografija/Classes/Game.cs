@@ -90,7 +90,7 @@ namespace BrzaGeografija.Classes
                 }
             }
 
-            if(Name.StartsWith(Letter.ToString()))
+            if(Name.Length >= 2 && Name.StartsWith(Letter.ToString()))
             {
                 points[0] = 10;
                 if (opponentGame.Name.StartsWith(Letter.ToString()) && opponentGame.Name.Equals(Name, StringComparison.OrdinalIgnoreCase))
@@ -98,7 +98,7 @@ namespace BrzaGeografija.Classes
                     points[0] -= 5;
                 }
             }
-            if (Plant.StartsWith(Letter.ToString()))
+            if (Plant.Length >= 2 && Plant.StartsWith(Letter.ToString()))
             {
                 points[5] = 10;
                 if (opponentGame.Plant.StartsWith(Letter.ToString()) && opponentGame.Plant.Equals(Plant, StringComparison.OrdinalIgnoreCase))
@@ -106,7 +106,7 @@ namespace BrzaGeografija.Classes
                     points[5] -= 5;
                 }
             }
-            if (Animal.StartsWith(Letter.ToString()))
+            if (Animal.Length >= 2 && Animal.StartsWith(Letter.ToString()))
             {
                 points[6] = 10;
                 if (opponentGame.Animal.StartsWith(Letter.ToString()) && opponentGame.Animal.Equals(Animal, StringComparison.OrdinalIgnoreCase))
@@ -114,7 +114,7 @@ namespace BrzaGeografija.Classes
                     points[6] -= 5;
                 }
             }
-            if (Thing.StartsWith(Letter.ToString()))
+            if (Thing.Length >= 2 && Thing.StartsWith(Letter.ToString()))
             {
                 points[7] = 10;
                 if (opponentGame.Thing.StartsWith(Letter.ToString()) && opponentGame.Thing.Equals(Thing, StringComparison.OrdinalIgnoreCase))

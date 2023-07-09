@@ -57,7 +57,7 @@ namespace BrzaGeografija
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Настана грешка при поврзување со серверот:\n\n" + ex.Message);
+                MessageBox.Show("Настана грешка при поврзување со серверот:\n\n" + ex.Message);
             }
         }
 
@@ -130,7 +130,7 @@ namespace BrzaGeografija
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Проблем со процесирање на податоците од серверска страна!\n\n" + ex.Message);
+                MessageBox.Show("Проблем со процесирање на податоците од серверска страна!\n\n" + ex.Message);
             }
         }
 

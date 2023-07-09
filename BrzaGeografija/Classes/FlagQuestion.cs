@@ -51,16 +51,5 @@ namespace BrzaGeografija.Classes
             return countries.ElementAt(questionId).Png;
         }
 
-        //public override string answerQuestion(int ans)
-        //{
-        //    if (ans == correctAnswer)
-        //    {
-        //        return "correct" + correctAnswer + ".png";
-        //    }
-        //    else
-        //    {
-        //        return "incorrect" + correctAnswer + ans + ".png";
-        //    }
-        //}
     }
 }

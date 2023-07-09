@@ -43,7 +43,7 @@ namespace BrzaGeografija.Classes
 
         public override string getQuestionText()
         {
-            return "Кој е главен град на " + countries.ElementAt(questionId).Name;
+            return "Кој е главен град на " + countries.ElementAt(questionId).Name + "?";
         }
 
         public override string getImageUrl()

@@ -69,6 +69,7 @@
             this.MinimizeBox = false;
             this.Name = "GameSelection";
             this.Text = "Избор на тренинг игра";
+            this.Load += new System.EventHandler(this.GameSelection_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

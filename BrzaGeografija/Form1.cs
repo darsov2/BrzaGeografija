@@ -28,5 +28,11 @@ namespace BrzaGeografija
             Form3 form3 = new Form3();
             form3.Show();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Manual manual = new Manual();
+            manual.Show();
+        }
     }
 }

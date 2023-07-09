@@ -28,5 +28,10 @@ namespace BrzaGeografija
             SpeedRunCategories speedRunCategories = new SpeedRunCategories();
             speedRunCategories.Show();
         }
+
+        private void GameSelection_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
